@@ -3,7 +3,7 @@ from graphics import start_graphics
 
 
 """
-Runs only once at the begining.
+Runs only once at the beggining.
 """
 def on_load():
     pass
