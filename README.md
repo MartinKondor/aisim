@@ -16,7 +16,7 @@ After implementation you can run your own ```__main__.py``` file with:
 
 ```$ python .```
 
-Or you can run the ```example.py``` file to see what the project could do currently.
+Or you can run the ```example/.``` file to see what the project could do currently.
 
 ## Tests
 

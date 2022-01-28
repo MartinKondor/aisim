@@ -9,10 +9,10 @@ Gets event functions as parameters.
 """
 def start_graphics(on_load=lambda:None, on_behave=lambda:None, on_perceive=lambda:None):
     pygame.init()
+    on_load()
     is_running = True
     screen = pygame.display.set_mode(Screen.size)
     clock = pygame.time.Clock()
-    on_load()
 
     while is_running:
         for event in pygame.event.get():
@@ -23,6 +23,8 @@ def start_graphics(on_load=lambda:None, on_behave=lambda:None, on_perceive=lambd
         screen.fill(Colors.black)
 
         for entity in Screen.entities:
+            if entity.marked_as_deletable:
+                continue
 
             # Behave before getting drawn out
             entity.behave(Screen.entities)
@@ -31,6 +33,9 @@ def start_graphics(on_load=lambda:None, on_behave=lambda:None, on_perceive=lambd
 
         # Perceive after drawing everything
         for entity in Screen.entities:
+            if entity.marked_as_deletable:
+                continue
+
             entity.perceive(Screen.entities)
             on_perceive()
 
