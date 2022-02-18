@@ -1,3 +1,8 @@
+<p align="center">
+    <img src="assets/ex1.png" width="300px" title="Example 1">
+    <img src="assets/ex2.png" width="300px" title="Example 2">
+</p>
+
 # 🤖 aisim
 
 Simulation environment for any AI system.
@@ -16,7 +21,7 @@ After implementation you can run your own ```__main__.py``` file with:
 
 ```$ python .```
 
-Or you can run the ```example/.``` file to see what the project could do currently.
+Or you can run examples from the  ```examples``` directory.
 
 ## Tests
 

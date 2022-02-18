@@ -20,7 +20,7 @@ def start_graphics(on_load=lambda:None, on_behave=lambda:None, on_perceive=lambd
                 is_running = False
 
         # Fill the screen
-        screen.fill(Colors.black)
+        screen.fill(Screen.bg_color)
 
         for entity in Screen.entities:
             if entity.marked_as_deletable:
@@ -28,7 +28,7 @@ def start_graphics(on_load=lambda:None, on_behave=lambda:None, on_perceive=lambd
 
             # Behave before getting drawn out
             entity.behave(Screen.entities)
-            pygame.draw.rect(screen, entity.color, entity.rect)
+            entity.draw(screen)
             on_behave()
 
         # Perceive after drawing everything
